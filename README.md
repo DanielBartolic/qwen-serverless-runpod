@@ -1,5 +1,6 @@
 # Qwen Image Generator - RunPod Serverless
 
+[![Runpod](https://api.runpod.io/badge/DanielBartolic/qwen-serverless-runpod)](https://console.runpod.io/hub/DanielBartolic/qwen-serverless-runpod)
 [![RunPod](https://img.shields.io/badge/RunPod-Serverless-blueviolet)](https://runpod.io)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
