@@ -1,0 +1,54 @@
+{
+  "title": "Qwen Image Generator",
+  "description": "ComfyUI-powered Qwen-Image serverless API for generating high-quality images with Lightning LoRA",
+  "type": "serverless",
+  "category": "image",
+  "iconUrl": "https://raw.githubusercontent.com/QwenLM/Qwen2-VL/main/assets/logo.jpg",
+  "config": {
+    "runsOn": "GPU",
+    "containerDiskInGb": 50,
+    "presets": [
+      {
+        "name": "Portrait (1440x1920)",
+        "defaults": {
+          "width": "1440",
+          "height": "1920",
+          "steps": "25",
+          "cfg": "1.0"
+        }
+      },
+      {
+        "name": "Landscape (1920x1440)",
+        "defaults": {
+          "width": "1920",
+          "height": "1440",
+          "steps": "25",
+          "cfg": "1.0"
+        }
+      },
+      {
+        "name": "Square (1328x1328)",
+        "defaults": {
+          "width": "1328",
+          "height": "1328",
+          "steps": "25",
+          "cfg": "1.0"
+        }
+      }
+    ],
+    "env": [
+      {
+        "key": "CUDA_VISIBLE_DEVICES",
+        "value": "0"
+      },
+      {
+        "key": "PYTORCH_CUDA_ALLOC_CONF",
+        "value": "max_split_size_mb:512"
+      },
+      {
+        "key": "HF_HOME",
+        "value": "/runpod-volume/.cache/huggingface"
+      }
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "tests": [
+    {
+      "name": "basic_image_generation",
+      "input": {
+        "prompt": "a beautiful sunset over mountains",
+        "width": 1440,
+        "height": 1920,
+        "seed": 123456,
+        "steps": 25,
+        "cfg": 1.0
+      },
+      "timeout": 120000
+    },
+    {
+      "name": "custom_resolution",
+      "input": {
+        "prompt": "a cyberpunk city at night, neon lights",
+        "width": 1920,
+        "height": 1440,
+        "seed": -1,
+        "steps": 25,
+        "cfg": 1.0
+      },
+      "timeout": 120000
+    },
+    {
+      "name": "square_format",
+      "input": {
+        "prompt": "portrait of a person in renaissance style",
+        "width": 1328,
+        "height": 1328,
+        "seed": 42,
+        "steps": 25,
+        "cfg": 1.0
+      },
+      "timeout": 120000
+    }
+  ],
+  "config": {
+    "gpuTypeId": "NVIDIA RTX 5090",
+    "gpuCount": 1,
+    "env": [
+      {
+        "key": "CUDA_VISIBLE_DEVICES",
+        "value": "0"
+      },
+      {
+        "key": "PYTORCH_CUDA_ALLOC_CONF",
+        "value": "max_split_size_mb:512"
+      }
+    ],
+    "allowedCudaVersions": [
+      "12.8",
+      "12.7",
+      "12.6",
+      "12.5",
+      "12.4",
+      "12.3",
+      "12.2",
+      "12.1"
+    ]
+  }
+}

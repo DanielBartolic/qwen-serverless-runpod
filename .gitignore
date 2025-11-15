@@ -1,0 +1,35 @@
+# Environment and secrets
+.env
+*.key
+*_key.txt
+endpoint_info.txt
+runpod_config.json
+
+# Build artifacts
+build.log
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+
+# Test outputs
+/tmp/
+*.png
+*.jpg
+test_output.*
+
+# Instructions (not needed for deployment)
+instructions/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
