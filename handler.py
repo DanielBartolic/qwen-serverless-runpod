@@ -1,3 +1,4 @@
+import runpod
 #!/usr/bin/env python3
 """
 RunPod Serverless Handler for ComfyUI Qwen-Image
@@ -20,7 +21,7 @@ from pathlib import Path
 from io import BytesIO
 from PIL import Image
 
-import runpod
+
 
 # Add ComfyUI to path
 sys.path.insert(0, '/app/ComfyUI')
