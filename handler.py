@@ -4,6 +4,8 @@ RunPod Serverless Handler for ComfyUI Qwen-Image
 Handles incoming requests and processes them through ComfyUI
 """
 
+import runpod
+
 import os
 import sys
 import json
@@ -18,7 +20,7 @@ from pathlib import Path
 from io import BytesIO
 from PIL import Image
 
-import runpod
+
 
 # Add ComfyUI to path
 sys.path.insert(0, '/app/ComfyUI')
